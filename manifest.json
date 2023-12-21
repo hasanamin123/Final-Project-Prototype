@@ -1,11 +1,24 @@
 {
-"name": "Netflix subtitles styler",
-"version": "1.0",
-"description": "Netflix subtitles styler"
-
-
-
-
-
-
+  "manifest_version": 2,
+  "name": "Netflix Subtitle Editor",
+  "version": "1.0",
+  "description": "Edit subtitles on Netflix.",
+  "icons": {
+    "16": "icon16.png"
+  },
+  "background": {
+    "scripts": ["content.js"],
+    "persistent": false
+  },
+  "permissions": ["storage", "activeTab"],
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.netflix.com/*"],
+      "js": ["content.js"]
+    }
+  ]
 }

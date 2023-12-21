@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <title>Netflix Subtitle Editor</title>
+</head>
+<body>
+  <div id="subtitleEditor">
+    <label for="languageSelect">Select Language:</label>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <!-- Add more language options as needed -->
+    </select>
+
+    <div id="subtitleList">
+      <h2>Subtitle List</h2>
+      <ul id="subtitleItems">
+        <!-- Display subtitle list here -->
+        <!-- Example list item: <li class="subtitleItem">Subtitle 1</li> -->
+        <li class="SubtitleItem"> English</li>
+        <li class="SubtitleItem"> Español</li>
+      </ul>
+    </div>
+
+    <textarea id="subtitleInput" placeholder="Enter subtitle text"></textarea>
+
+    <button id="editSubtitleBtn">Edit Subtitle</button>
+    <button id="deleteSubtitleBtn">Delete Subtitle</button>
+    <button id="addSubtitleBtn">Add Subtitle</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
